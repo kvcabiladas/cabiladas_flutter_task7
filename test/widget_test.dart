@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:cabiladas_task7/main.dart';
+import 'package:catacutan_task7/main.dart';
 
 void main() {
   testWidgets('E-Commerce Shop page renders', (WidgetTester tester) async {
