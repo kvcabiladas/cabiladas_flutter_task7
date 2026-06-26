@@ -18,7 +18,7 @@ class CategoryButton extends StatelessWidget {
       onPressed: onTap, 
       style: ElevatedButton.styleFrom(
         backgroundColor: 
-          isSelected ? Colors.blue : Colors.grey,
+          isSelected ? Theme.of(context).colorScheme.primary : Colors.grey,
         foregroundColor: Colors.white,
       ),
       child: Text(title));

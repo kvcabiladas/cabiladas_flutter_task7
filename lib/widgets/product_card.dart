@@ -5,17 +5,23 @@ class ProductCard extends StatelessWidget {
   final Product product;
   final bool isFavorite;
   final VoidCallback onFavorite;
+  final VoidCallback onAddToCart;
 
   const ProductCard({
     super.key,
     required this.product,
     required this.isFavorite,
     required this.onFavorite,
+    required this.onAddToCart,
   });
 
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 2,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -57,8 +63,8 @@ class ProductCard extends StatelessWidget {
               children: [
                 Text(
                   "₱${product.price}",
-                  style: const TextStyle(
-                    color: Colors.blue,
+                  style: TextStyle(
+                    color: Theme.of(context).colorScheme.primary,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -73,6 +79,26 @@ class ProductCard extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+            const SizedBox(height: 8),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                onPressed: product.status == 'Out of Stock' ? null : onAddToCart,
+                icon: const Icon(Icons.add_shopping_cart, size: 16),
+                label: const Text(
+                  "Add to Cart",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Theme.of(context).colorScheme.primary,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(vertical: 4),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
