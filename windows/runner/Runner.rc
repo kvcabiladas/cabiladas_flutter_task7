@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "catacutan_task7" "\0"
+            VALUE "FileDescription", "cabiladas_task7" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "catacutan_task7" "\0"
+            VALUE "InternalName", "cabiladas_task7" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2026 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "catacutan_task7.exe" "\0"
-            VALUE "ProductName", "catacutan_task7" "\0"
+            VALUE "OriginalFilename", "cabiladas_task7.exe" "\0"
+            VALUE "ProductName", "cabiladas_task7" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
